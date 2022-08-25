@@ -1,3 +1,5 @@
+using System.Text.Json.Serialization;
+
 namespace giuneco.wth;
 
 public record Clouds(int All);
@@ -6,9 +8,9 @@ public record Coord(double Lon, double Lat);
 
 public record Main(
     double Temp,
-    double FeelsLike,
-    double TempMin,
-    double TempMax,
+    [property: JsonPropertyName("feels_like")] double FeelsLike,
+    [property: JsonPropertyName("temp_min")] double TempMin,
+    [property: JsonPropertyName("temp_max")] double TempMax,
     int Pressure,
     int Humidity
 );
@@ -48,7 +50,6 @@ public record Wind(double Speed, int Deg, double Gust);
 
 // Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse);
 public record City(
-    int Id,
     string Name,
     Coord Coord,
     string Country,
@@ -66,15 +67,11 @@ public record Forecast(
     Clouds Clouds,
     Wind Wind,
     int Visibility,
-    double Pop,
-    string DtTxt
+    [property: JsonPropertyName("dt_txt")] string DtTxt
 );
 
 
 public record WeatherForecastResponse(
-    string Cod,
-    int Message,
-    int Cnt,
     IReadOnlyList<Forecast> List,
     City City
 );
