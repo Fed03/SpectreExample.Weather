@@ -23,7 +23,7 @@ public record CurrentWeatherResponse(
     int Visibility,
     Wind Wind,
     Clouds Clouds,
-    int Dt,
+    [property: JsonPropertyName("dt"), JsonConverter(typeof(DateTimeJsonConverter))]DateTime Date,
     Sys Sys,
     int Timezone,
     int Id,
@@ -35,8 +35,8 @@ public record Sys(
     int Type,
     int Id,
     string Country,
-    int Sunrise,
-    int Sunset
+    [property:JsonConverter(typeof(DateTimeJsonConverter))] DateTime Sunrise,
+    [property:JsonConverter(typeof(DateTimeJsonConverter))] DateTime Sunset
 );
 
 public record Weather(
@@ -55,19 +55,20 @@ public record City(
     string Country,
     int Population,
     int Timezone,
-    int Sunrise,
-    int Sunset
+    [property:JsonConverter(typeof(DateTimeJsonConverter))] DateTime Sunrise,
+    [property:JsonConverter(typeof(DateTimeJsonConverter))] DateTime Sunset
 );
 
 
 public record Forecast(
-    int Dt,
+    [property: JsonPropertyName("dt"), JsonConverter(typeof(DateTimeJsonConverter))]DateTime Date,
     Main Main,
     IReadOnlyList<Weather> Weather,
     Clouds Clouds,
     Wind Wind,
     int Visibility,
-    [property: JsonPropertyName("dt_txt")] string DtTxt
+    [property: JsonPropertyName("dt_txt")] string DtTxt,
+    [property: JsonPropertyName("pop")] double PrecipitationProbability
 );
 
 
