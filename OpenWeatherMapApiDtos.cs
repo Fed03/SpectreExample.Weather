@@ -1,6 +1,6 @@
 using System.Text.Json.Serialization;
 
-namespace giuneco.wth;
+namespace SpectreExample.Weather;
 
 public record Clouds(int All);
 
@@ -8,9 +8,12 @@ public record Coord(double Lon, double Lat);
 
 public record Main(
     double Temp,
-    [property: JsonPropertyName("feels_like")] double FeelsLike,
-    [property: JsonPropertyName("temp_min")] double TempMin,
-    [property: JsonPropertyName("temp_max")] double TempMax,
+    [property: JsonPropertyName("feels_like")]
+    double FeelsLike,
+    [property: JsonPropertyName("temp_min")]
+    double TempMin,
+    [property: JsonPropertyName("temp_max")]
+    double TempMax,
     int Pressure,
     int Humidity
 );
@@ -23,7 +26,8 @@ public record CurrentWeatherResponse(
     int Visibility,
     Wind Wind,
     Clouds Clouds,
-    [property: JsonPropertyName("dt"), JsonConverter(typeof(DateTimeJsonConverter))]DateTime Date,
+    [property: JsonPropertyName("dt"), JsonConverter(typeof(DateTimeJsonConverter))]
+    DateTime Date,
     Sys Sys,
     int Timezone,
     int Id,
@@ -35,8 +39,10 @@ public record Sys(
     int Type,
     int Id,
     string Country,
-    [property:JsonConverter(typeof(DateTimeJsonConverter))] DateTime Sunrise,
-    [property:JsonConverter(typeof(DateTimeJsonConverter))] DateTime Sunset
+    [property: JsonConverter(typeof(DateTimeJsonConverter))]
+    DateTime Sunrise,
+    [property: JsonConverter(typeof(DateTimeJsonConverter))]
+    DateTime Sunset
 );
 
 public record Weather(
@@ -55,13 +61,15 @@ public record City(
     string Country,
     int Population,
     int Timezone,
-    [property:JsonConverter(typeof(DateTimeJsonConverter))] DateTime Sunrise,
-    [property:JsonConverter(typeof(DateTimeJsonConverter))] DateTime Sunset
+    [property: JsonConverter(typeof(DateTimeJsonConverter))]
+    DateTime Sunrise,
+    [property: JsonConverter(typeof(DateTimeJsonConverter))]
+    DateTime Sunset
 );
 
-
 public record Forecast(
-    [property: JsonPropertyName("dt"), JsonConverter(typeof(DateTimeJsonConverter))]DateTime Date,
+    [property: JsonPropertyName("dt"), JsonConverter(typeof(DateTimeJsonConverter))]
+    DateTime Date,
     Main Main,
     IReadOnlyList<Weather> Weather,
     Clouds Clouds,
@@ -71,9 +79,7 @@ public record Forecast(
     [property: JsonPropertyName("pop")] double PrecipitationProbability
 );
 
-
 public record WeatherForecastResponse(
     IReadOnlyList<Forecast> List,
     City City
 );
-

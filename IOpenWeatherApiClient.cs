@@ -1,6 +1,6 @@
 using Refit;
 
-namespace giuneco.wth;
+namespace SpectreExample.Weather;
 
 public interface IOpenWeatherApiClient
 {

@@ -1,7 +1,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using Spectre.Cli;
 
-namespace giuneco.wth.Infrastructure;
+namespace SpectreExample.Weather.Infrastructure;
 
 internal sealed class TypeRegistrar : ITypeRegistrar
 {

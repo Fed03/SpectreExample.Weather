@@ -3,7 +3,7 @@ using System.Globalization;
 using Spectre.Cli;
 using Spectre.Console;
 
-namespace giuneco.wth.Commands;
+namespace SpectreExample.Weather.Commands;
 
 // ReSharper disable once ClassNeverInstantiated.Global
 internal class ForecastCommand : AsyncCommand<ForecastCommand.Settings>

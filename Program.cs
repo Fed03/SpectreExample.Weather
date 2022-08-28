@@ -1,12 +1,12 @@
 ﻿using System.Globalization;
-using giuneco.wth;
-using giuneco.wth.Commands;
-using giuneco.wth.Infrastructure;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Refit;
 using Spectre.Cli;
+using SpectreExample.Weather;
+using SpectreExample.Weather.Commands;
+using SpectreExample.Weather.Infrastructure;
 
 CultureInfo.CurrentCulture = CultureInfo.GetCultureInfo("it-IT");
 

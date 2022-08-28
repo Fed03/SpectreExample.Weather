@@ -1,4 +1,4 @@
-namespace giuneco.wth;
+namespace SpectreExample.Weather;
 
 internal static class ApiKeyService
 {

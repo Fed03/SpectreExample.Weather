@@ -1,7 +1,7 @@
 using System.ComponentModel;
 using Spectre.Cli;
 
-namespace giuneco.wth.Commands;
+namespace SpectreExample.Weather.Commands;
 
 internal class AddKeyCommand : AsyncCommand<AddKeyCommand.Settings>
 {

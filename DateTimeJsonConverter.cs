@@ -1,7 +1,7 @@
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace giuneco.wth;
+namespace SpectreExample.Weather;
 
 internal class DateTimeJsonConverter : JsonConverter<DateTime>
 {

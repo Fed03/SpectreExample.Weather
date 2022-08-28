@@ -3,7 +3,7 @@ using Microsoft.Extensions.Hosting;
 using Spectre.Cli;
 using Spectre.Console;
 
-namespace giuneco.wth.Infrastructure;
+namespace SpectreExample.Weather.Infrastructure;
 
 public static class HostingExtensions
 {
