@@ -2,6 +2,7 @@ using System.ComponentModel;
 using System.Globalization;
 using Spectre.Cli;
 using Spectre.Console;
+using SpectreExample.Weather.OpenWeatherStuff;
 
 namespace SpectreExample.Weather.Commands;
 

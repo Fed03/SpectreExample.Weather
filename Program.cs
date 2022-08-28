@@ -4,9 +4,9 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Refit;
 using Spectre.Cli;
-using SpectreExample.Weather;
 using SpectreExample.Weather.Commands;
 using SpectreExample.Weather.Infrastructure;
+using SpectreExample.Weather.OpenWeatherStuff;
 
 CultureInfo.CurrentCulture = CultureInfo.GetCultureInfo("it-IT");
 

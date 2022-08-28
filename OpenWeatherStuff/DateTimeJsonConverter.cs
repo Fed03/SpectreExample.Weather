@@ -1,7 +1,7 @@
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace SpectreExample.Weather;
+namespace SpectreExample.Weather.OpenWeatherStuff;
 
 internal class DateTimeJsonConverter : JsonConverter<DateTime>
 {

@@ -1,6 +1,6 @@
 using Refit;
 
-namespace SpectreExample.Weather;
+namespace SpectreExample.Weather.OpenWeatherStuff;
 
 public interface IOpenWeatherApiClient
 {

@@ -1,6 +1,6 @@
 using System.Text.Json.Serialization;
 
-namespace SpectreExample.Weather;
+namespace SpectreExample.Weather.OpenWeatherStuff;
 
 public record Clouds(int All);
 
